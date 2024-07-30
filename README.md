@@ -12,11 +12,11 @@ SimAM is a feature enhancement module without neural networks, offering the adva
 Therefore, we introduced a slicing operation. when the feature map is sliced into different blocks, larger objects, due to their prominent texture features, influence the average value of the block they are in, reducing the additional weighting they receive. After merging the feature maps, larger objects can still maintain high recognizability and may even be further enhanced. In contrast, the features of smaller objects differ more from the local average value, resulting in more weighting and enhanced small object features. In other words, the SWS module ensures that both large and small objects receive fair attention and enhancement.
 
 ### VisDrone2019-testset-dev Evaluation
-#### Detection with PRB-FPN [here](https://github.com/pingyang1117/PRBNet_PyTorch)
+#### Detection with PRB-FPN-ELAN [(here)](https://github.com/pingyang1117/PRBNet_PyTorch)
 
 |Model          |AP     |AP_50      |AP_75|AP_S     |AP_M      |AP_L |
 |:----:         |:----: |:---:      |:--: |:----:   |:---:     |:--: |
-|FR-SimAM-R50   |39.2   |60.7       |40.8 |22.8     |43.0      |50.6 |
-|FR-SimAM-R101  |41.2   |62.4       |45.0 |24.0     |45.6      |52.8 |
-|MR-SimAM-R50   |39.8   |61.0       |43.4 |23.1     |43.7      |51.4 |
-|MR-SimAM-R101  |41.8   |62.8       |46.0 |24.8     |46.2      |53.9 |
+|SimAM   |39.2   |60.7       |40.8 |22.8     |43.0      |50.6 |
+|Coordinate  |41.2   |62.4       |45.0 |24.0     |45.6      |52.8 |
+|SE   |39.8   |61.0       |43.4 |23.1     |43.7      |51.4 |
+|CBAM  |41.8   |62.8       |46.0 |24.8     |46.2      |53.9 |
