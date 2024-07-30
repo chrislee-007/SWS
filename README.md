@@ -23,3 +23,8 @@ Therefore, we introduced a slicing operation. when the feature map is sliced int
 |CBAM            |39.7       |22.1       |53.0 |41.3     |46.4      |+590K |
 |Biformer        |39.8       |22.2       |48.1 |44.6     |46.3      |+4.67M |
 |SWS(Ours)       |39.9       |22.3       |53.3 |41.7     |46.8      |+460K |
+
+## Reference 
+SWS code is based on SimAM [here](https://github.com/ZjjConan/SimAM)
+
+version 1.1.1 by LI,GUAN-YI 2024/07/30
