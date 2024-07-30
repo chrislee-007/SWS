@@ -2,6 +2,6 @@
 
 <div align="center">
     <a href="./">
-        <img src="sws_fig" width="80%"/>
+        <img src="sws_fig.jpg" width="80%"/>
     </a>
 </div>
