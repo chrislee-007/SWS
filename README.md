@@ -1,5 +1,5 @@
 # SWS(SimAM With Slicing) Attention 
-for Small object detection
+Attention Module for Small object detection
 
 <div align="center">
     <a href="./">
