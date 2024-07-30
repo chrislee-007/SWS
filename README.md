@@ -13,9 +13,9 @@ SimAM is a feature enhancement module without neural networks, offering the adva
 Therefore, we introduced a slicing operation. when the feature map is sliced into different blocks, larger objects, due to their prominent texture features, influence the average value of the block they are in, reducing the additional weighting they receive. After merging the feature maps, larger objects can still maintain high recognizability and may even be further enhanced. In contrast, the features of smaller objects differ more from the local average value, resulting in more weighting and enhanced small object features. In other words, the SWS module ensures that both large and small objects receive fair attention and enhancement.
 
 ## VisDrone2019-testset-dev Evaluation
-#### Detection base on PRB-FPN-ELAN(P5-layer .yaml #30) [(here)](https://github.com/pingyang1117/PRBNet_PyTorch)
 The experimental hardware for this study is an NVIDIA GeForce RTX 4070, implemented on Ubuntu 22.04, with CUDA version 11.7, Python version 3.9.13, and PyTorch version 2.0.1. The training parameters are as follows: img-size = 640*640, Epochs = 300, Train Batch = 2. When testing the model, NMS IOU = 0.45, and Test Batch = 32.
 
+#### Detection base on PRB-FPN-ELAN(P5-layer .yaml #30) [(here)](https://github.com/pingyang1117/PRBNet_PyTorch)
 |Model           |mAP50      |mAP50-95   |P    |R        |F1-score  |Prams |
 |:----:          |:----:     |:---:      |:--: |:----:   |:---:     |:--: |
 |base            |39.5       |22.0       |49.9 |43.0     |46.2      |- |
