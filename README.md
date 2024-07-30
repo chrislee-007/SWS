@@ -11,10 +11,8 @@ SimAM is a feature enhancement module without neural networks, offering the adva
 
 Therefore, we introduced a slicing operation. when the feature map is sliced into different blocks, larger objects, due to their prominent texture features, influence the average value of the block they are in, reducing the additional weighting they receive. After merging the feature maps, larger objects can still maintain high recognizability and may even be further enhanced. In contrast, the features of smaller objects differ more from the local average value, resulting in more weighting and enhanced small object features. In other words, the SWS module ensures that both large and small objects receive fair attention and enhancement.
 
-### COCO Evaluation
-We use [mmdetection](https://github.com/open-mmlab/mmdetection) to train Faster RCNN and Mask RCNN for object detection and instance segmentation. If you want to run the following models, please firstly install `mmdetection` with their guide. And then put all `.py` in mmdetection of this repository to the corresponding folders. All the following models can be download from **[BaiduYunPan](https://pan.baidu.com/s/1NtMgu09vv0tEhb2PsXCsQQ)** (extract code: **ysrz**) and **[Google Drive](https://drive.google.com/drive/folders/1F8W3MY32crU6jUeV2sgc_4AQwqt_MvAp?usp=sharing).**
-
-#### Detection with Faster RCNN (FR for short) and Mask RCNN (MR for short)
+### VisDrone2019-testset-dev Evaluation
+#### Detection with PRB-FPN [here](https://github.com/pingyang1117/PRBNet_PyTorch)
 
 |Model          |AP     |AP_50      |AP_75|AP_S     |AP_M      |AP_L |
 |:----:         |:----: |:---:      |:--: |:----:   |:---:     |:--: |
