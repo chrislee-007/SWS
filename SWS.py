@@ -5,7 +5,7 @@ import torch.nn as nn
 class SimAMWithSlicing(nn.Module):
     def __init__(self, e_lambda=1e-4):
         super(SimAMWithSlicing, self).__init__()
-        self.activaton = nn.Sigmoid()
+        self.activation = nn.Sigmoid()
         self.e_lambda = e_lambda
 
     def forward(self, x):
