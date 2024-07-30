@@ -14,9 +14,12 @@ Therefore, we introduced a slicing operation. when the feature map is sliced int
 ### VisDrone2019-testset-dev Evaluation
 #### Detection with PRB-FPN-ELAN [(here)](https://github.com/pingyang1117/PRBNet_PyTorch)
 
-|Model          |AP     |AP_50      |AP_75|AP_S     |AP_M      |AP_L |
-|:----:         |:----: |:---:      |:--: |:----:   |:---:     |:--: |
-|SimAM   |39.2   |60.7       |40.8 |22.8     |43.0      |50.6 |
-|Coordinate  |41.2   |62.4       |45.0 |24.0     |45.6      |52.8 |
-|SE   |39.8   |61.0       |43.4 |23.1     |43.7      |51.4 |
-|CBAM  |41.8   |62.8       |46.0 |24.8     |46.2      |53.9 |
+|Model           |mAP50      |mAP50-95   |P    |R        |F1-score  |Prams |
+|:----:          |:----:     |:---:      |:--: |:----:   |:---:     |:--: |
+|base            |39.5       |22.0       |49.9 |43.0     |46.2      |- |
+|SimAM           |39.4       |22.0       |51.2 |42.1     |46.2      |+460K |
+|Coordinate      |39.6       |22.2       |49.7 |43.6     |46.5      |+560K |
+|SE              |39.7       |22.2       |49.1 |43.8     |46.3      |+590K |
+|CBAM            |39.7       |22.1       |53.0 |41.3     |46.4      |+590K |
+|Biformer        |39.8       |22.2       |48.1 |44.6     |46.3      |+4.67M |
+|SWS(Ours)       |39.9       |22.3       |53.3 |41.7     |46.8      |+460K |
