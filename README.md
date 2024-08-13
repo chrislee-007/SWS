@@ -15,7 +15,7 @@ Therefore, we introduced a slicing operation. when the feature map is sliced int
 ## How to use
 1.Add SWS.py to the models folder.
 2.Add the following program to common.py and replace Conv in (your).yaml.
-3.Add Conv_SWS to the parse_model function in yolo.py so that it can be used by .yaml
+3.Add Conv_SWS to the parse_model function in yolo.py so that it can be used by .yaml.
 ``` shell
 from models.SWS import SimAMWithSlicing
 
