@@ -13,7 +13,9 @@ SimAM is a feature enhancement module without neural networks, offering the adva
 Therefore, we introduced a slicing operation. when the feature map is sliced into different blocks, larger objects, due to their prominent texture features, influence the average value of the block they are in, reducing the additional weighting they receive. After merging the feature maps, larger objects can still maintain high recognizability and may even be further enhanced. In contrast, the features of smaller objects differ more from the local average value, resulting in more weighting and enhanced small object features. In other words, the SWS module ensures that both large and small objects receive fair attention and enhancement.
 
 ## How to use
-Add the following program to common.py and replace Conv in (your).yaml
+1.Add SWS.py to the models folder.
+2.Add the following program to common.py and replace Conv in (your).yaml.
+3.Add Conv_SWS to the parse_model function in yolo.py so that it can be used by .yaml
 ``` shell
 from models.SWS import SimAMWithSlicing
 
