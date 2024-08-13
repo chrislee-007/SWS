@@ -54,4 +54,4 @@ The experimental hardware for this study is an NVIDIA GeForce RTX 4070(12GB VRAM
 ## Reference 
 SWS code is based on SimAM [here](https://github.com/ZjjConan/SimAM)
 
-version 1.1.1 by LI,GUAN-YI 2024/07/30
+version 1.1.1 by chris-lee 2024/07/30
