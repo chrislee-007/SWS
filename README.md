@@ -12,6 +12,27 @@ SimAM is a feature enhancement module without neural networks, offering the adva
 
 Therefore, we introduced a slicing operation. when the feature map is sliced into different blocks, larger objects, due to their prominent texture features, influence the average value of the block they are in, reducing the additional weighting they receive. After merging the feature maps, larger objects can still maintain high recognizability and may even be further enhanced. In contrast, the features of smaller objects differ more from the local average value, resulting in more weighting and enhanced small object features. In other words, the SWS module ensures that both large and small objects receive fair attention and enhancement.
 
+## How to use
+Add the following program to common.py and replace Conv in (your).yaml
+``` shell
+from models.SWS import SimAMWithSlicing
+
+class Conv_SWS(nn.Module):
+    # Standard convolution
+    def __init__(self, c1, c2, k=1, s=1, p=None, g=1, act=True):  # ch_in, ch_out, kernel, stride, padding, groups
+        super(Conv_SWS, self).__init__()
+        self.conv = nn.Conv2d(c1, c2, k, s, autopad(k, p), groups=g, bias=False)
+        self.bn = nn.BatchNorm2d(c2)
+        self.act = nn.SiLU() if act is True else (act if isinstance(act, nn.Module) else nn.Identity())
+        self.att = SimAMWithSlicing(c2)
+
+    def forward(self, x):
+        return self.att(self.act(self.bn(self.conv(x))))
+
+    def fuseforward(self, x):
+        return self.att(self.act(self.conv(x)))
+```
+
 ## VisDrone2019-testset-dev Evaluation
 The experimental hardware for this study is an NVIDIA GeForce RTX 4070(12GB VRAM), implemented on Ubuntu 22.04, with CUDA version 11.7, Python version 3.9.13, and PyTorch version 2.0.1. The training parameters are as follows: img-size = 640*640, Epochs = 300, Train Batch = 2. When testing the model, NMS IOU = 0.45, and Test Batch = 32.
 
